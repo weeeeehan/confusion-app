@@ -19,7 +19,7 @@
     <session id="1102647311">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="3" />
@@ -31,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
