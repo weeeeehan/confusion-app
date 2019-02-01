@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, FlatList, Modal, Button } from 'react-native';
-import { Card, Icon, Rating, FormInput } from 'react-native-elements';
+import { Card, Icon, Rating, Input } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { baseUrl } from '../shared/baseUrl';
 import { postFavorite, postComment } from '../redux/ActionCreators';
@@ -62,7 +62,13 @@ function RenderComments(props) {
         return(
             <View key={index} style={{margin: 10}}>
                 <Text style={{fontSize: 14}}>{item.comment}</Text>
-                <Text style={{fontSize: 12}}>{item.rating} Stars</Text>
+                <Rating
+                    type='star'
+                    imageSize={10}
+                    readonly
+                    startingValue={item.rating}
+                    style={{ alignItems: 'flex-start' }}
+                    />
                 <Text style={{fontSize: 12}}>{'-- ' + item.author + ', ' + item.date}</Text>
             </View>
         );
@@ -141,7 +147,7 @@ class Dishdetail extends Component {
                                 name='user'
                                 type='font-awesome'
                                 />
-                            <FormInput 
+                            <Input 
                                 placeholder='Author'
                                 onChangeText={(value) => this.setState({ author: value })}
                                 />
@@ -151,7 +157,7 @@ class Dishdetail extends Component {
                                 name='comment'
                                 type='font-awesome'
                                 />
-                            <FormInput 
+                            <Input 
                                 placeholder='Comment'
                                 onChangeText={(value) => this.setState({ comment: value })}
                                 />
