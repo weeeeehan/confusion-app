@@ -28,8 +28,7 @@ class About extends Component {
                     subtitleStyle={{ color: 'grey'}}
                     subtitleNumberOfLines={15}
                     hideChevron={true}
-                    avatar={{uri: baseUrl + item.image}}
-                    roundAvatar
+                    leftAvatar={{ source: { uri: baseUrl + item.image } }}
                     />
             );
         }
